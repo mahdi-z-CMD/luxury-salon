@@ -1,16 +1,19 @@
 {
   "files": {
-    "main.css": "/luxury-salon/static/css/main.0bbd7770.css",
-    "main.js": "/luxury-salon/static/js/main.43f0d62b.js",
+    "main.css": "/luxury-salon/static/css/main.65ea2a5b.css",
+    "main.js": "/luxury-salon/static/js/main.f12cff0e.js",
     "static/js/488.d41a6b8a.chunk.js": "/luxury-salon/static/js/488.d41a6b8a.chunk.js",
-    "static/media/logo.svg": "/luxury-salon/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/logo2_nobg.png": "/luxury-salon/static/media/logo2_nobg.99152a54dfd4ed4f1296.png",
+    "static/media/background_header.jpg": "/luxury-salon/static/media/background_header.cf74c7d55b8befefdee9.jpg",
+    "static/media/MonumentExtended-Regular.otf": "/luxury-salon/static/media/MonumentExtended-Regular.db74f7a563ec017311bc.otf",
+    "static/media/MonumentExtended-Ultrabold.otf": "/luxury-salon/static/media/MonumentExtended-Ultrabold.9db16afed1996befff6b.otf",
     "index.html": "/luxury-salon/index.html",
-    "main.0bbd7770.css.map": "/luxury-salon/static/css/main.0bbd7770.css.map",
-    "main.43f0d62b.js.map": "/luxury-salon/static/js/main.43f0d62b.js.map",
+    "main.65ea2a5b.css.map": "/luxury-salon/static/css/main.65ea2a5b.css.map",
+    "main.f12cff0e.js.map": "/luxury-salon/static/js/main.f12cff0e.js.map",
     "488.d41a6b8a.chunk.js.map": "/luxury-salon/static/js/488.d41a6b8a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0bbd7770.css",
-    "static/js/main.43f0d62b.js"
+    "static/css/main.65ea2a5b.css",
+    "static/js/main.f12cff0e.js"
   ]
 }
