@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import './font.css';
+
+:root { 
+  --orange-color: #F89369;
+
+ }
+
+.custom-bg { 
+  background-image: url('./assets/background_header.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+ }
+
+ .text-stroke {
+  -webkit-text-stroke: 1px #F89369;
+  text-stroke: 1px #F89369; /* Fallback for browsers that support text-stroke */
+}
