@@ -1,19 +1,27 @@
 {
   "files": {
-    "main.css": "/luxury-salon/static/css/main.65ea2a5b.css",
-    "main.js": "/luxury-salon/static/js/main.f12cff0e.js",
+    "main.css": "/luxury-salon/static/css/main.a81aa810.css",
+    "main.js": "/luxury-salon/static/js/main.1adebf9a.js",
     "static/js/488.d41a6b8a.chunk.js": "/luxury-salon/static/js/488.d41a6b8a.chunk.js",
+    "static/media/image1_tool.png": "/luxury-salon/static/media/image1_tool.c020d0e23bc939117f8f.png",
+    "static/media/Zetafonts - Lovelace Text Bold Italic.otf": "/luxury-salon/static/media/Zetafonts - Lovelace Text Bold Italic.23b0765ceec0e5be2288.otf",
+    "static/media/Zetafonts - Lovelace Text Regular.otf": "/luxury-salon/static/media/Zetafonts - Lovelace Text Regular.13f9fe62b251e0244a9e.otf",
+    "static/media/image2.jpg": "/luxury-salon/static/media/image2.da45e7678701cbefe89a.jpg",
+    "static/media/image3.jpg": "/luxury-salon/static/media/image3.26740f42a13f3a0b56e1.jpg",
+    "static/media/image3_tool.png": "/luxury-salon/static/media/image3_tool.a1353b91cb42722e7768.png",
     "static/media/logo2_nobg.png": "/luxury-salon/static/media/logo2_nobg.99152a54dfd4ed4f1296.png",
+    "static/media/image2_tool.png": "/luxury-salon/static/media/image2_tool.4a360648a14d948a502e.png",
     "static/media/background_header.jpg": "/luxury-salon/static/media/background_header.cf74c7d55b8befefdee9.jpg",
     "static/media/MonumentExtended-Regular.otf": "/luxury-salon/static/media/MonumentExtended-Regular.db74f7a563ec017311bc.otf",
     "static/media/MonumentExtended-Ultrabold.otf": "/luxury-salon/static/media/MonumentExtended-Ultrabold.9db16afed1996befff6b.otf",
+    "static/media/image1.jpg": "/luxury-salon/static/media/image1.a6d911ec1fb0d94d38e1.jpg",
     "index.html": "/luxury-salon/index.html",
-    "main.65ea2a5b.css.map": "/luxury-salon/static/css/main.65ea2a5b.css.map",
-    "main.f12cff0e.js.map": "/luxury-salon/static/js/main.f12cff0e.js.map",
+    "main.a81aa810.css.map": "/luxury-salon/static/css/main.a81aa810.css.map",
+    "main.1adebf9a.js.map": "/luxury-salon/static/js/main.1adebf9a.js.map",
     "488.d41a6b8a.chunk.js.map": "/luxury-salon/static/js/488.d41a6b8a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.65ea2a5b.css",
-    "static/js/main.f12cff0e.js"
+    "static/css/main.a81aa810.css",
+    "static/js/main.1adebf9a.js"
   ]
 }
