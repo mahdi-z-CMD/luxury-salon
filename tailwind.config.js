@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        monument: ['Monument Extended', 'sans-serif'],
+        monument: ['Monument Extended', 'sans-serif'],lovelace: ['Lovelace Text', 'serif'],
       },
       colors: { orangeColor: 'var(--orange-color)', },
     },
