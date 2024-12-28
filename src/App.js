@@ -1,6 +1,6 @@
 import './App.css';
 import Logo from './assets/logo2_nobg.png';
-import React, { useState } from "react";
+import React, { useState , useEffect } from "react";
 
 // images
 import image1 from './assets/images/image1.jpg'
@@ -16,27 +16,51 @@ import Produckdata from './assets/producks.json'
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [width, setWidth] = useState(window.innerWidth);
+  
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
 
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   const toggleMenu = () => {
     setMenuOpen(!menuOpen); // Toggle the menu state
   };
-  
-
-
   const BoxProduct = (promp) => {
     
     return(
-      <div className='flex flex-col basis-1/3'>
-        <div className='h-[600px] bg-white flex justify-center items-center'>
-          <img src={promp.src} className='w-80 h-1/2'></img>
+      <div className='flex flex-col basis-96 sm:basis-1/3 transition-transform duration-500 transform hover:scale-105 opacity-0 blur-100 animate-fade-in'>
+        <div className='sm:h-[600px] h-[300px] bg-white flex justify-center items-center'>
+          <img src={promp.src} className='2xl:w-80 2xl:h-1/2 lg:w-60' alt="Description" />
         </div>
-        <div className='flex justify-between mt-5 font-medium sm:text-base'>
-          <h1 className=''>{promp.name}</h1>
-          <span className='text-orangeColor'>{promp.price} €</span>
+        <div className='flex justify-between mt-5 font-medium text-xs sm:text-base sm:tracking-normal tracking-widest'>
+          <h1>{promp.name}</h1>
+          <span className='text-orange-500'>{promp.price} €</span>
         </div>
       </div>
     )
   }
+  const [startIndex, setStartIndex] = useState(0); // Track the starting index
+  const itemsToShow = width >= 620 ? 3 : 2; // Number of items to display at a time
+
+  const handleNext = () => {
+    if (startIndex + itemsToShow < Produckdata.length) {
+      setStartIndex(startIndex + 1);
+    }
+  };
+
+  const handlePrev = () => {
+    if (startIndex > 0) {
+      setStartIndex(startIndex - 1);
+    }
+  };
   return (
     <div className="App overflow-x-hidden overflow-y-hidden bg-[#F5F5F0]">
       <header className="custom-bg h-screen">
@@ -136,20 +160,29 @@ function App() {
           </div>
         </section>
         {/* Product section */}
-        <div className='relative mt-52 pt-8 flex gap-7 overflow-hidden flex-nowrap justify-center w-full pr-20 pl-20'>
-          <h1 className='sm:text-6xl font-monument font-light leading-10 tracking-widest absolute top-0  left-40 z-'>NOS PRODUCT</h1>
-          <a className='sm:text-xs font-monument font-normal leading-4 tracking-wide border border-black p-4 rounded absolute right-40 top-0 hover:text-white hover:border-black  hover:bg-black hover:bg-opacity-80 transition-all duration-200 ease-in-out cursor-pointer'>VOIR TOUT</a>
-          {Produckdata.map((product, index) => (
-            <BoxProduct
-              key={index}
-              name={product.name}
-              price={product.price}
-              src={product.src}
-            />
-          ))}
+        <div className='relative mt-52 pt-8 flex gap-4 sm:gap-7 overflow-hidden flex-nowrap justify-center w-full pr-10 pl-10 sm:pr-20 sm:pl-20 transition-transform duration-500 pb-10'
+        >
+          <div className='absolute text-3xl w-full flex justify-between h-2/3 p-2 sm:p-5 mt-10'>
+            <button onClick={handlePrev}>{'<'}</button>
+            <button onClick={handleNext}>{'>'}</button>
+          </div>
+          <h1 className='text-2xl sm:text-3xl font-monument font-light leading-10 tracking-widest absolute sm:top-0  sm:left-40 2xl:text-6xl xl:text-6xl lg:text-5xl md:text-4xl z-10'>NOS PRODUCT</h1>
+          {Produckdata.slice(startIndex, startIndex + itemsToShow).map((product, index) => (
+          <BoxProduct key={index} name={product.name} price={product.price} src={product.src} />
+        ))}
         </div>
-        <div className='h-52 flex items-end'>
-          <h1>s</h1>
+        <div className='bg-orangeColor flex justify-around mt-28 p-32'>
+            <div className='flex flex-col gap-5 justify-start text-left mr-20'>
+              <h1 className='sm:text-5xl text-[#121212] font-lovelace font-extralight tracking-wider'>Nous avons pour ambition de vous faire sortir du salon avec une nouvelle image de <span className='text-white underline'>vous</span>.</h1>
+              <p className='sm:text-base text-[#121212] leading-7 font-monument tracking-widest mt-16'>Richard Davidson,</p>
+              <p className='sm:text-base text-white opacity-70 font-monument tracking-widest'>Responsable du salon de Montpellier</p>
+            </div>
+            <div>
+              <p className='text-[#222124] sm:text-2xl font-lovelace font-normal text-left left-40 leading-10 relative w-1/2'>Une barbe nette, une moustache ciselée, une coupe personnalisée, des soins ciblés, le grooming, c’est l’art de prendre soin de vous. Chez nous, vous arrivez avec ou sans idée précise de votre futur look… </p>
+            </div>
+        </div>
+        <div className='h-[300px] flex flex-col items-end'>
+<h1>h</h1>
         </div>
       </main>
     </div>
