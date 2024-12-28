@@ -1,10 +1,13 @@
 {
   "files": {
-    "main.css": "/luxury-salon/static/css/main.a81aa810.css",
-    "main.js": "/luxury-salon/static/js/main.1adebf9a.js",
+    "main.css": "/luxury-salon/static/css/main.ddce3bee.css",
+    "main.js": "/luxury-salon/static/js/main.88cbbfec.js",
     "static/js/488.d41a6b8a.chunk.js": "/luxury-salon/static/js/488.d41a6b8a.chunk.js",
+    "static/media/produck3.png": "/luxury-salon/static/media/produck3.ddded89c33e8f68a105f.png",
+    "static/media/produck2.png": "/luxury-salon/static/media/produck2.b667424c9c36bb053b30.png",
     "static/media/image1_tool.png": "/luxury-salon/static/media/image1_tool.c020d0e23bc939117f8f.png",
     "static/media/Zetafonts - Lovelace Text Bold Italic.otf": "/luxury-salon/static/media/Zetafonts - Lovelace Text Bold Italic.23b0765ceec0e5be2288.otf",
+    "static/media/produck1.png": "/luxury-salon/static/media/produck1.588f50c21107a127dd58.png",
     "static/media/Zetafonts - Lovelace Text Regular.otf": "/luxury-salon/static/media/Zetafonts - Lovelace Text Regular.13f9fe62b251e0244a9e.otf",
     "static/media/image2.jpg": "/luxury-salon/static/media/image2.da45e7678701cbefe89a.jpg",
     "static/media/image3.jpg": "/luxury-salon/static/media/image3.26740f42a13f3a0b56e1.jpg",
@@ -16,12 +19,12 @@
     "static/media/MonumentExtended-Ultrabold.otf": "/luxury-salon/static/media/MonumentExtended-Ultrabold.9db16afed1996befff6b.otf",
     "static/media/image1.jpg": "/luxury-salon/static/media/image1.a6d911ec1fb0d94d38e1.jpg",
     "index.html": "/luxury-salon/index.html",
-    "main.a81aa810.css.map": "/luxury-salon/static/css/main.a81aa810.css.map",
-    "main.1adebf9a.js.map": "/luxury-salon/static/js/main.1adebf9a.js.map",
+    "main.ddce3bee.css.map": "/luxury-salon/static/css/main.ddce3bee.css.map",
+    "main.88cbbfec.js.map": "/luxury-salon/static/js/main.88cbbfec.js.map",
     "488.d41a6b8a.chunk.js.map": "/luxury-salon/static/js/488.d41a6b8a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a81aa810.css",
-    "static/js/main.1adebf9a.js"
+    "static/css/main.ddce3bee.css",
+    "static/js/main.88cbbfec.js"
   ]
 }
