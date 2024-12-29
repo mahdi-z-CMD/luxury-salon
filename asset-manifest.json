@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.css": "/luxury-salon/static/css/main.ddce3bee.css",
-    "main.js": "/luxury-salon/static/js/main.88cbbfec.js",
+    "main.css": "/luxury-salon/static/css/main.0d29bebe.css",
+    "main.js": "/luxury-salon/static/js/main.72f65a44.js",
     "static/js/488.d41a6b8a.chunk.js": "/luxury-salon/static/js/488.d41a6b8a.chunk.js",
     "static/media/produck3.png": "/luxury-salon/static/media/produck3.ddded89c33e8f68a105f.png",
+    "static/media/bg-artists2.png": "/luxury-salon/static/media/bg-artists2.40c8094b47cc548e5515.png",
     "static/media/produck2.png": "/luxury-salon/static/media/produck2.b667424c9c36bb053b30.png",
     "static/media/image1_tool.png": "/luxury-salon/static/media/image1_tool.c020d0e23bc939117f8f.png",
     "static/media/Zetafonts - Lovelace Text Bold Italic.otf": "/luxury-salon/static/media/Zetafonts - Lovelace Text Bold Italic.23b0765ceec0e5be2288.otf",
@@ -13,18 +14,24 @@
     "static/media/image3.jpg": "/luxury-salon/static/media/image3.26740f42a13f3a0b56e1.jpg",
     "static/media/image3_tool.png": "/luxury-salon/static/media/image3_tool.a1353b91cb42722e7768.png",
     "static/media/logo2_nobg.png": "/luxury-salon/static/media/logo2_nobg.99152a54dfd4ed4f1296.png",
+    "static/media/bg-artists.jpg": "/luxury-salon/static/media/bg-artists.18ac76e066e75537eb67.jpg",
     "static/media/image2_tool.png": "/luxury-salon/static/media/image2_tool.4a360648a14d948a502e.png",
     "static/media/background_header.jpg": "/luxury-salon/static/media/background_header.cf74c7d55b8befefdee9.jpg",
     "static/media/MonumentExtended-Regular.otf": "/luxury-salon/static/media/MonumentExtended-Regular.db74f7a563ec017311bc.otf",
     "static/media/MonumentExtended-Ultrabold.otf": "/luxury-salon/static/media/MonumentExtended-Ultrabold.9db16afed1996befff6b.otf",
+    "static/media/artist1(1).jpg": "/luxury-salon/static/media/artist1(1).141f9431e0eca6c9338f.jpg",
     "static/media/image1.jpg": "/luxury-salon/static/media/image1.a6d911ec1fb0d94d38e1.jpg",
+    "static/media/artist1(5).jpg": "/luxury-salon/static/media/artist1(5).f081f2badb7a3db9d7b8.jpg",
+    "static/media/artist1(4).jpg": "/luxury-salon/static/media/artist1(4).4caf3723cdd9ed0f8fed.jpg",
+    "static/media/artist1(3).jpg": "/luxury-salon/static/media/artist1(3).2cffcfb3681dab10a00e.jpg",
+    "static/media/artist1(2).jpg": "/luxury-salon/static/media/artist1(2).54c2ab6ef2fd14401e3d.jpg",
     "index.html": "/luxury-salon/index.html",
-    "main.ddce3bee.css.map": "/luxury-salon/static/css/main.ddce3bee.css.map",
-    "main.88cbbfec.js.map": "/luxury-salon/static/js/main.88cbbfec.js.map",
+    "main.0d29bebe.css.map": "/luxury-salon/static/css/main.0d29bebe.css.map",
+    "main.72f65a44.js.map": "/luxury-salon/static/js/main.72f65a44.js.map",
     "488.d41a6b8a.chunk.js.map": "/luxury-salon/static/js/488.d41a6b8a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ddce3bee.css",
-    "static/js/main.88cbbfec.js"
+    "static/css/main.0d29bebe.css",
+    "static/js/main.72f65a44.js"
   ]
 }
