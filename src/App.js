@@ -6,6 +6,8 @@ import React, { useState , useEffect } from "react";
 import image1 from './assets/images/image1.jpg'
 import image2 from './assets/images/image2.jpg'
 import image3 from './assets/images/image3.jpg'
+import bg_artists from './assets/images/bg-artists.jpg'
+import bg_artists2 from './assets/images/bg-artists2.png'
 import image1_tool from './assets/images/image1_tool.png'
 import image2_tool from './assets/images/image2_tool.png'
 import image3_tool from './assets/images/image3_tool.png'
@@ -13,6 +15,11 @@ import image1_pd from './assets/images/produck1.png'
 import image2_pd from './assets/images/produck2.png'
 import image3_pd from './assets/images/produck3.png'
 import Produckdata from './assets/producks.json'
+import artisimg1 from './assets/images/artist1(1).jpg'
+import artisimg2 from './assets/images/artist1(2).jpg'
+import artisimg3 from './assets/images/artist1(3).jpg'
+import artisimg4 from './assets/images/artist1(4).jpg'
+import artisimg5 from './assets/images/artist1(5).jpg'
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -43,6 +50,22 @@ function App() {
         <div className='flex justify-between mt-5 font-medium text-xs sm:text-base sm:tracking-normal tracking-widest'>
           <h1>{promp.name}</h1>
           <span className='text-orange-500'>{promp.price} €</span>
+        </div>
+      </div>
+    )
+  }
+
+  const Boxartists = (prop) =>{
+
+    return(
+      <div className='flex w-full justify-between -mt-10 p-6 pt-10 gap-3'>
+        <div className='flex flex-col w-1/2'>
+          <img src={prop.src} className='w-[100%] h-[265px] rounded-md'></img>
+          <h1 className='w-4/4 text-base mt-3 font-monument'><span className='text-orangeColor'>{prop.span}</span>{prop.name}</h1>
+        </div>
+        <div className='flex flex-col relative top-10 w-1/2'>
+          <img src={prop.src2} className='w-[100%] h-[265px] rounded-md'></img>
+          <h1 className='w-4/4 text-base mt-3 font-monument'><span className='text-orangeColor'>{prop.span2}</span>{prop.name2}</h1>
         </div>
       </div>
     )
@@ -171,18 +194,43 @@ function App() {
           <BoxProduct key={index} name={product.name} price={product.price} src={product.src} />
         ))}
         </div>
-        <div className='bg-orangeColor flex justify-around mt-28 p-32'>
-            <div className='flex flex-col gap-5 justify-start text-left mr-20'>
-              <h1 className='sm:text-5xl text-[#121212] font-lovelace font-extralight tracking-wider'>Nous avons pour ambition de vous faire sortir du salon avec une nouvelle image de <span className='text-white underline'>vous</span>.</h1>
-              <p className='sm:text-base text-[#121212] leading-7 font-monument tracking-widest mt-16'>Richard Davidson,</p>
-              <p className='sm:text-base text-white opacity-70 font-monument tracking-widest'>Responsable du salon de Montpellier</p>
+        <div className='bg-orangeColor flex sm:flex-row flex-col sm:justify-around mt-28 p-16 lg:p-32 sm:p-20'>
+            <div className='flex flex-col gap-2 sm:gap-5 justify-start text-left sm:mr-20'>
+              <h1 className='text-3xl sm:text-5xl text-[#121212] font-lovelace font-extralight tracking-wider lg:text-3xl xl:text-5xl md:text-2xl'>Nous avons pour ambition de vous faire sortir du salon avec une nouvelle image de <span className='text-white underline'>vous</span>.</h1>
+              <p className='text-base xl:text-base lg:text-xs sm:text-xs text-[#121212] leading-7 font-monument tracking-widest mt-10'>Richard Davidson,</p>
+              <p className='text-base xl:text-base lg:text-xs sm:text-xs text-white opacity-70 font-monument tracking-widest'>Responsable du salon de Montpellier</p>
             </div>
-            <div>
-              <p className='text-[#222124] sm:text-2xl font-lovelace font-normal text-left left-40 leading-10 relative w-1/2'>Une barbe nette, une moustache ciselée, une coupe personnalisée, des soins ciblés, le grooming, c’est l’art de prendre soin de vous. Chez nous, vous arrivez avec ou sans idée précise de votre futur look… </p>
+            <div className='mt-10 sm:mt-0'>
+              <p className='text-[#222124] xl:text-2xl md:text-xl lg:text-xl font-lovelace font-normal text-left xl:left-40 md:left-20 leading-7 tracking-wider sm:mt-0 mt-14 w-2/2 sm:leading-10 relative xl:w-1/2 md:w-2/3'>Une barbe nette, une moustache ciselée, une coupe personnalisée, des soins ciblés, le grooming, c’est l’art de prendre soin de vous. Chez nous, vous arrivez avec ou sans idée précise de votre futur look… </p>
             </div>
         </div>
-        <div className='h-[300px] flex flex-col items-end'>
-<h1>h</h1>
+        <div className='flex flex-col gap-3 justify-start items-center mt-20'>
+          <h1 className='font-monument sm:text-6xl tracking-widest text-3xl'>NOS ARTISTES</h1>
+          <p className='font-lovelace font-extralight text-base lead sm:text-base text-center w-3/4 xl:w-1/3 md:w-2/3 mt-10 sm:mt-8'>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus</p>
+          <a className='z-10 mb-24 relative text-xs top-10 border border-black rounded p-4 text-[#000000] sm:text-xs cursor-pointer leading-5 tracking-wider hover:text-white hover:border-black  hover:bg-black hover:bg-opacity-80 transition-all duration-200 ease-in-out'>DÉCOUVRIR</a>
+          {
+            width >= 620 ? <img src={bg_artists} className='sm:w-[940px] sm:h-[970px] sm:relative sm:bottom-7 border-8 border-[#F5F5F0]'></img> : <>
+              <Boxartists
+                src={artisimg1}
+                src2={artisimg2}
+                span={'Saga'}
+                span2={'Sudanka'}
+                name={' Lindén, Hair Designer'}
+                name2={' Bakalowi, Hair Designer'}
+              ></Boxartists>
+              <Boxartists
+                src={artisimg3}
+                src2={artisimg4}
+                span={'Saga'}
+                span2={'Frank'}
+                name={'  Boehm, Responsable'}
+                name2={' Bakalowi, Hair Designer'}
+              ></Boxartists>
+            </>
+          }
+        </div>
+        <div className='h-[500px] flex flex-col justify-end'>
+          <h1>a</h1>
         </div>
       </main>
     </div>
