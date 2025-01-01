@@ -1,0 +1,34 @@
+[
+    {
+      "name": "Coiffure",
+      "des": "An add-on is a set of premium features that you can add to your Forma",
+      "price": "30",
+      "des1": "Analyse et massage du cuir chevelu",
+      "des2": "Application d’un soin adapté",
+      "des3": "Coupe de cheveux",
+      "des4": "Coupe de cheveux",
+      "des5": "Fixation"
+    },
+    {
+      "name": "Coiffure ET BARBE",
+      "des": "An add-on is a set of premium features that you can add to your Forma",
+      "price": "45",
+      "des1": "Analyse et massage du cuir chevelu",
+      "des2": "Application d’un soin adapté",
+      "des3": "Coupe de cheveux",
+      "des4": "Taille et tonte de barbe",
+      "des5": "Fixation",
+      "rotate": true
+    },
+    {
+      "name": "BARBE",
+      "des": "An add-on is a set of premium features that you can add to your Forma",
+      "price": "20",
+      "des1": "Analyse et massage du cuir chevelu",
+      "des2": "Application d’un soin adapté",
+      "des3": "Coupe de cheveux",
+      "des4": "Taille et tonte de barbe",
+      "des5": "Fixation"
+    }
+  ]
+  

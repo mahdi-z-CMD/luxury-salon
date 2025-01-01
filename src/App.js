@@ -15,11 +15,14 @@ import image1_pd from './assets/images/produck1.png'
 import image2_pd from './assets/images/produck2.png'
 import image3_pd from './assets/images/produck3.png'
 import Produckdata from './assets/producks.json'
+import boxData from './assets/boxData.json';
 import artisimg1 from './assets/images/artist1(1).jpg'
 import artisimg2 from './assets/images/artist1(2).jpg'
 import artisimg3 from './assets/images/artist1(3).jpg'
 import artisimg4 from './assets/images/artist1(4).jpg'
 import artisimg5 from './assets/images/artist1(5).jpg'
+import Ticksvg from './assets/images/tick.svg'
+
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -70,6 +73,40 @@ function App() {
       </div>
     )
   }
+  const Boxprices = (prop) => {
+    return (
+      <div className="border-2 border-black p-10 rounded-lg flex flex-col basis-2/4 bg-[#F5F5F0] transition-transform duration-500 transform hover:scale-105 opacity-0 blur-100 animate-fade-in">
+        <div className="flex flex-col items-center">
+          <h1 className="sm:text-xl font-monument tracking-widest mt-4">{prop.name}</h1>
+          <p className="sm:text-base text-[rgba(18,18,18,0.7)] m-3 sm:w-72 font-lovelace">{prop.des}</p>
+          <span className="sm:text-xs text-[#00000073] mt-5 font-lovelace">à partir de</span>
+          <span className="sm:text-2xl text-orangeColor -tracking-tight font-monument">{prop.price} €</span>
+          <button className="sm:mt-10 relative text-xs border sm:pr-16 sm:pl-16 border-black rounded p-5 text-[#000000] sm:text-xs cursor-pointer leading-5 tracking-wider hover:text-white hover:border-black hover:bg-black hover:bg-opacity-80 transition-all duration-200 ease-in-out">
+            Book now
+          </button>
+        </div>
+        <div className="flex flex-col mt-12 gap-3 pb-5">
+          <p className="flex items-center ml-7">
+            <img src={Ticksvg} className="mr-3" />{prop.des1}
+          </p>
+          <p className="flex items-center ml-7">
+            <img src={Ticksvg} className="mr-3" />{prop.des2}
+          </p>
+          <p className="flex items-center ml-7">
+            <img src={Ticksvg} className="mr-3" />{prop.des3}
+          </p>
+          <p className="flex items-center ml-7">
+            <img src={Ticksvg} className="mr-3" />{prop.des4}
+          </p>
+          <p className="flex items-center ml-7">
+            <img src={Ticksvg} className="mr-3" />{prop.des5}
+          </p>
+        </div>
+      </div>
+    );
+  };
+  
+
   const [startIndex, setStartIndex] = useState(0); // Track the starting index
   const itemsToShow = width >= 620 ? 3 : 2; // Number of items to display at a time
 
@@ -229,8 +266,31 @@ function App() {
             </>
           }
         </div>
-        <div className='h-[500px] flex flex-col justify-end'>
-          <h1>a</h1>
+        <div className='flex flex-col items-center h-[1000px] mt-56'>
+          <h1 className='sm:text-6xl font-monument tracking-widest'>NOS TARIFS</h1>
+          <p className='sm:text-lg font-lovelace font-extralight m-10 sm:w-1/3 text-center leading-7'>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus
+adipiscing elit ut aliquam.</p>
+        <div className="flex gap-10 w-full justify-center mt-10">
+          {boxData.map((box, index) => (
+            <div
+              key={index}
+              className={`transform transition-all duration-300 z-10 ${
+                index === 0 ? "rotate-[-10deg] -z-0 top-10 left-10 relative" : ""
+              } ${index === boxData.length - 1 ? "rotate-[10deg] -z-0 top-10 right-10 relative" : ""}`}
+            >
+              <Boxprices
+                name={box.name}
+                des={box.des}
+                price={box.price}
+                des1={box.des1}
+                des2={box.des2}
+                des3={box.des3}
+                des4={box.des4}
+                des5={box.des5}
+              />
+            </div>
+          ))}
+        </div>
         </div>
       </main>
     </div>
