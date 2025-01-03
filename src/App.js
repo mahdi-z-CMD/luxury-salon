@@ -21,13 +21,29 @@ import artisimg2 from './assets/images/artist1(2).jpg'
 import artisimg3 from './assets/images/artist1(3).jpg'
 import artisimg4 from './assets/images/artist1(4).jpg'
 import artisimg5 from './assets/images/artist1(5).jpg'
+import footerbg from './assets/images/footerbg.jpg'
 import Ticksvg from './assets/images/tick.svg'
+import logofacebook from './assets/images/facebook.svg'
+import logox from './assets/images/x.svg'
+import logoinstagram from './assets/images/instagram.svg'
 
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [width, setWidth] = useState(window.innerWidth);
-  
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handlePrev2 = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? boxData.length - 1 : prevIndex - 1
+    );
+  };
+
+  const handleNext2 = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === boxData.length - 1 ? 0 : prevIndex + 1
+    );
+  };
   useEffect(() => {
     const handleResize = () => {
       setWidth(window.innerWidth);
@@ -73,34 +89,25 @@ function App() {
       </div>
     )
   }
-  const Boxprices = (prop) => {
+  const Boxprices = ({ name, des, price, descriptions = [] }) => {
     return (
-      <div className="border-2 border-black p-10 rounded-lg flex flex-col basis-2/4 bg-[#F5F5F0] transition-transform duration-500 transform hover:scale-105 opacity-0 blur-100 animate-fade-in">
-        <div className="flex flex-col items-center">
-          <h1 className="sm:text-xl font-monument tracking-widest mt-4">{prop.name}</h1>
-          <p className="sm:text-base text-[rgba(18,18,18,0.7)] m-3 sm:w-72 font-lovelace">{prop.des}</p>
+      <div className="border-2 border-black xl:p-10 md:p-3 sm:p-0 p-5 rounded-lg flex flex-col basis-2/3 sm:w-[90%] max-w-[500px] bg-[#F5F5F0] transition-transform duration-500 transform hover:scale-105 opacity-0 blur-100 animate-fade-in">
+        <div className="flex flex-col items-center h-1/2">
+          <h1 className="xl:text-xl sm:text-lg font-monument tracking-widest mt-4">{name}</h1>
+          <p className="xl:text-base sm:text-xs text-[rgba(18,18,18,0.7)] m-3 sm:w-72 font-lovelace">{des}</p>
           <span className="sm:text-xs text-[#00000073] mt-5 font-lovelace">à partir de</span>
-          <span className="sm:text-2xl text-orangeColor -tracking-tight font-monument">{prop.price} €</span>
-          <button className="sm:mt-10 relative text-xs border sm:pr-16 sm:pl-16 border-black rounded p-5 text-[#000000] sm:text-xs cursor-pointer leading-5 tracking-wider hover:text-white hover:border-black hover:bg-black hover:bg-opacity-80 transition-all duration-200 ease-in-out">
+          <span className="xl:text-2xl sm:text-xl text-orangeColor -tracking-tight font-monument">{price} €</span>
+          <button className="sm:mt-10 mt-5 pr-16 pl-16 relative text-xs border xl:pr-16 xl:pl-16 sm:pr-10 sm:pl-10 border-black rounded p-5 text-[#000000] sm:text-xs cursor-pointer leading-5 tracking-wider hover:text-white hover:border-black hover:bg-black hover:bg-opacity-80 transition-all duration-200 ease-in-out">
             Book now
           </button>
         </div>
-        <div className="flex flex-col mt-12 gap-3 pb-5">
-          <p className="flex items-center ml-7">
-            <img src={Ticksvg} className="mr-3" />{prop.des1}
-          </p>
-          <p className="flex items-center ml-7">
-            <img src={Ticksvg} className="mr-3" />{prop.des2}
-          </p>
-          <p className="flex items-center ml-7">
-            <img src={Ticksvg} className="mr-3" />{prop.des3}
-          </p>
-          <p className="flex items-center ml-7">
-            <img src={Ticksvg} className="mr-3" />{prop.des4}
-          </p>
-          <p className="flex items-center ml-7">
-            <img src={Ticksvg} className="mr-3" />{prop.des5}
-          </p>
+        <div className="flex flex-col mt-16 gap-3 pb-3 font-lovelace xl:text-base sm:text-xs">
+          {descriptions.map((description, index) => (
+            <p key={index} className="flex items-center">
+              <img src={Ticksvg} className="mr-3" alt="Tick" />
+              {description}
+            </p>
+          ))}
         </div>
       </div>
     );
@@ -266,31 +273,81 @@ function App() {
             </>
           }
         </div>
-        <div className='flex flex-col items-center h-[1000px] mt-56'>
-          <h1 className='sm:text-6xl font-monument tracking-widest'>NOS TARIFS</h1>
-          <p className='sm:text-lg font-lovelace font-extralight m-10 sm:w-1/3 text-center leading-7'>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus
-adipiscing elit ut aliquam.</p>
-        <div className="flex gap-10 w-full justify-center mt-10">
-          {boxData.map((box, index) => (
+        <div className='flex flex-col items-center mt-40 sm:mt-20'>
+          <h1 className='font-monument sm:text-6xl tracking-widest text-3xl'>NOS TARIFS</h1>
+          <p className='font-lovelace font-extralight text-base lead sm:text-base text-center w-3/4 xl:w-1/3 md:w-2/3 mt-10 sm:mt-8'>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus adipiscing elit ut aliquam.</p>
+          <div className="flex flex-col items-center w-full justify-center mt-10 relative">
+          {/* Navigation Buttons */}
+          <div className="absolute text-3xl w-full flex justify-between p-2 sm:p-5 mt-10 font-bold sm:-z-0 z-10">
+            <button onClick={handlePrev2}>{'<'}</button>
+            <button onClick={handleNext2}>{'>'}</button>
+          </div>
+          {/* Desktop View: Show 3 Items */}
+          <div className="hidden sm:flex gap-1 justify-center w-full">
+            {boxData.slice(currentIndex, currentIndex + 3).map((box, index) => (
+              <div
+                key={index}
+                className={`transform transition-all duration-300 flex justify-center`}
+              >
+                <Boxprices
+                  name={box.name}
+                  des={box.des}
+                  price={box.price}
+                  descriptions={[
+                    box.des1,
+                    box.des2,
+                    box.des3,
+                    box.des4,
+                    box.des5,
+                  ].filter(Boolean)} // Filter out any undefined or null values
+                />
+              </div>
+            ))}
+          </div>
+
+          {/* Mobile View: Show 1 Item */}
+          <div className="flex sm:hidden justify-center w-full">
             <div
-              key={index}
-              className={`transform transition-all duration-300 z-10 ${
-                index === 0 ? "rotate-[-10deg] -z-0 top-10 left-10 relative" : ""
-              } ${index === boxData.length - 1 ? "rotate-[10deg] -z-0 top-10 right-10 relative" : ""}`}
+              className={`transform transition-all duration-300 flex justify-center`}
             >
               <Boxprices
-                name={box.name}
-                des={box.des}
-                price={box.price}
-                des1={box.des1}
-                des2={box.des2}
-                des3={box.des3}
-                des4={box.des4}
-                des5={box.des5}
+                name={boxData[currentIndex].name}
+                des={boxData[currentIndex].des}
+                price={boxData[currentIndex].price}
+                descriptions={[
+                  boxData[currentIndex].des1,
+                  boxData[currentIndex].des2,
+                  boxData[currentIndex].des3,
+                  boxData[currentIndex].des4,
+                  boxData[currentIndex].des5,
+                ].filter(Boolean)} // Filter out any undefined or null values
               />
             </div>
-          ))}
+          </div>
         </div>
+        </div>
+        <div className='h-20 relative w-[180%] text-6xl sm:w-[110%] sm:h-[150px] bg-orangeColor rotate-2 mt-40 right-5 sm:relative flex justify-center items-center'>
+        <h1 className='text-transparent text-stroke2 tracking-widest xl:text-8xl 2xl:text-9xl lg:text-7xl md:text-6xl sm:text-5xl text-6xl'>
+          NOUS CONTACTER 
+        </h1>
+      </div>
+      <div className='flex sm:flex-row flex-col justify-between pr-16 pl-16'>
+        <img src={footerbg} className='w-[255px] h-[310px] 2xl:w-[540px] 2xl:h-[665px] xl:w-[450px] xl:h-[565px] lg:w-[400px] lg:h-[515px] sm:w-[330px] sm:h-[405px] rotate-2 sm:-rotate-2 -top-4 right-12 sm:right-0 sm:-top-10 relative'></img>
+        <div className='flex flex-col justify-start lg:mt-20 sm:mt-5 items-center sm:items-start w-full sm:w-1/2 2xl:'>
+          <h1 className='font-monument 2xl:text-6xl xl:text-5xl lg:text-4xl sm:text-3xl tracking-widest text-3xl mt-10'>coordonnées</h1>
+          <p className='font-lovelace text-[#121212] 2xl:text-lg xl:text-md lg:mt-10 sm:mt-5 sm:w-3/4 sm:text-left text-center text-sm mt-5 opacity-75'>Prototypes may also be exempted from some requirements that will apply to the final product</p>
+          <p className='font-lovelace text-[#121212] 2xl:text-2xl xl:text-xl lg:mt-16 sm:mt-7 sm:w-3/4 sm:text-left text-center text-sm mt-10 opacity-75'>7813 Cherry Hill Ave. Snohomish, Paris 98290</p>
+          <p className='font-lovelace text-[#121212] 2xl:text-2xl xl:text-xl tracking-wider lg:mt-16 sm:mt-10 mt-7 opacity-85'>📞 +33 31 94 38 76 04</p>
+          <p className='font-lovelace text-[#121212] 2xl:text-2xl xl:text-xl tracking-wider sm:mt-0 mt-3 opacity-85'>👋 hello@frenchbarber.fr</p>
+          <div className='flex gap-10 mt-12'>
+            <img src={logofacebook} className='w-[45px] h-[45px] sm:w-[50px] sm:h-[50px] cursor-pointer transition-transform duration-500 transform hover:scale-150 opacity-0 blur-100 animate-fade-in'></img>
+            <img src={logox} className='w-[45px] h-[45px] sm:w-[50px] sm:h-[50px] cursor-pointer transition-transform duration-500 transform hover:scale-150 opacity-0 blur-100 animate-fade-in'></img>
+            <img src={logoinstagram} className='w-[45px] h-[45px] sm:w-[50px] sm:h-[50px] cursor-pointer transition-transform duration-500 transform hover:scale-150 opacity-0 blur-100 animate-fade-in'></img>
+          </div>
+        </div>
+      </div>
+        <div className='h-[1000px]'>
+
         </div>
       </main>
     </div>

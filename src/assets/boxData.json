@@ -17,8 +17,26 @@
       "des2": "Application d’un soin adapté",
       "des3": "Coupe de cheveux",
       "des4": "Taille et tonte de barbe",
-      "des5": "Fixation",
-      "rotate": true
+      "des5": "Fixation"
+    },
+    {
+      "name": "LES POLOS",
+      "des": "An add-on is a set of premium features that you can add to your Forma",
+      "price": "12",
+      "des1": "Analyse et massage du cuir chevelu",
+      "des2": "Application d’un soin adapté",
+      "des3": "Coupe de cheveux",
+      "des4": "Taille et tonte de barbe"
+    },
+    {
+      "name": "PAPLO EMLIO ESKOBARO",
+      "des": "An add-on is a set of premium features that you can add to your Forma",
+      "price": "100",
+      "des1": "Analyse et massage du cuir chevelu",
+      "des2": "Application d’un soin adapté",
+      "des3": "Coupe de cheveux",
+      "des4": "Taille et tonte de barbe",
+      "des5": "Fixation"
     },
     {
       "name": "BARBE",
