@@ -23,6 +23,7 @@ import artisimg4 from './assets/images/artist1(4).jpg'
 import artisimg5 from './assets/images/artist1(5).jpg'
 import footerbg from './assets/images/footerbg.jpg'
 import Ticksvg from './assets/images/tick.svg'
+import arrowdownlogo from './assets/images/arrowdown.svg'
 import logofacebook from './assets/images/facebook.svg'
 import logox from './assets/images/x.svg'
 import logoinstagram from './assets/images/instagram.svg'
@@ -32,7 +33,15 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [width, setWidth] = useState(window.innerWidth);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState();
+  const [isVisible2, setIsVisible2] = useState();
 
+  const toggleList = () => {
+    setIsVisible(!isVisible);
+  };
+  const toggleList2 = () => {
+    setIsVisible2(!isVisible2);
+  };
   const handlePrev2 = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? boxData.length - 1 : prevIndex - 1
@@ -47,6 +56,8 @@ function App() {
   useEffect(() => {
     const handleResize = () => {
       setWidth(window.innerWidth);
+      window.innerWidth >= 650 ? setIsVisible(true) : setIsVisible(false)
+      window.innerWidth >= 650 ? setIsVisible2(true) : setIsVisible2(false)
     };
 
     window.addEventListener('resize', handleResize);
@@ -346,9 +357,38 @@ function App() {
           </div>
         </div>
       </div>
-        <div className='h-[1000px]'>
-
+      <div className='bg-[#000000E5] mt-10 sm:mt-20 p-10 pt-16 lg:pl-52 sm:pl-20 pb-5 flex flex-col gap-10'>
+        <div className='flex justify-between items-start sm:flex-row flex-col'>
+        <div className='flex flex-col font-lovelace sm:text-base text-[#F5F5F0] w-full sm:basis-2/5 items-center sm:items-start justify-evenly'>
+          <img src={Logo} alt="Luxury Hair Club Logo" className="w-36 sm:w-12 xl:w-16" />
+          <p className='mt-5 sm:w-2/3 text-center sm:text-start'>L’atmosphère streetstyle et tendance, associée à l’élégance et le savoir-faire de Paris, créent un concept chic et  chaleureux.</p>
+          <p className='mt-5 hidden sm:block'>Téléphone : 03 12 14 27 64</p>
         </div>
+        <div className='flex flex-col w-full sm:basis-1/4 items-center sm:items-start sm:mt-0 mt-16'>
+          <h1 className='sm:text-lg text-xl text-[#F5F5F0] font-monument flex w-full justify-between' onClick={toggleList}>Le shop<img src={arrowdownlogo} className='sm:hidden block'></img></h1>
+          {isVisible &&
+           <ul className='text-[#F5F5F0]  sm:text-base flex flex-col gap-7 sm:gap-4 mt-10 font-lovelace items-start justify-evenly w-full'>
+           <li className='hover:text-orangeColor cursor-pointer'>Nos prestations</li>
+           <li className='hover:text-orangeColor cursor-pointer'>Nos produits</li>
+           <li className='hover:text-orangeColor cursor-pointer'>Nos salons</li>
+           <li className='hover:text-orangeColor cursor-pointer'>Nos tarifs</li>
+         </ul>
+          }
+        </div>
+        <div className='flex flex-col w-full sm:basis-1/4 items-center sm:items-start sm:mt-0 mt-11'>
+        <h1 className='sm:text-lg text-xl text-[#F5F5F0] font-monument flex w-full justify-between' onClick={toggleList2}>Informations<img src={arrowdownlogo} className='sm:hidden block'></img></h1>
+        {isVisible2 && 
+        <ul className='text-[#F5F5F0] sm:text-base flex flex-col gap-7 sm:gap-4 mt-10 font-lovelace items-start justify-evenly w-full'>
+        <li className='hover:text-orangeColor cursor-pointer'>Nous rejoindre</li>
+        <li className='hover:text-orangeColor cursor-pointer'>Instagram</li>
+        <li className='hover:text-orangeColor cursor-pointer'>Facebook</li>
+        <li className='hover:text-orangeColor cursor-pointer'>Twitter</li>
+      </ul>
+        }
+        </div>
+        </div>
+        <span className='sm:text-sm text-[#F5F5F0] sm:mr-24'>© 2021 The German Barber</span>
+      </div>
       </main>
     </div>
   );
