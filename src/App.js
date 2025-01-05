@@ -3,9 +3,9 @@ import Logo from './assets/logo2_nobg.png';
 import React, { useState , useEffect } from "react";
 
 // images
-import image1 from './assets/images/image1.jpg'
-import image2 from './assets/images/image2.jpg'
-import image3 from './assets/images/image3.jpg'
+import image1 from './assets/images/image1.webp'
+import image2 from './assets/images/image2.webp'
+import image3 from './assets/images/image3.webp'
 import bg_artists from './assets/images/bg-artists.jpg'
 import bg_artists2 from './assets/images/bg-artists2.png'
 import image1_tool from './assets/images/image1_tool.png'
@@ -21,7 +21,7 @@ import artisimg2 from './assets/images/artist1(2).jpg'
 import artisimg3 from './assets/images/artist1(3).jpg'
 import artisimg4 from './assets/images/artist1(4).jpg'
 import artisimg5 from './assets/images/artist1(5).jpg'
-import footerbg from './assets/images/footerbg.jpg'
+import footerbg from './assets/images/footerbg.webp'
 import Ticksvg from './assets/images/tick.svg'
 import arrowdownlogo from './assets/images/arrowdown.svg'
 import logofacebook from './assets/images/facebook.svg'
