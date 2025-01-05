@@ -1,6 +1,7 @@
 import './App.css';
 import Logo from './assets/logo2_nobg.png';
 import React, { useState , useEffect } from "react";
+import { Helmet } from "react-helmet";
 
 // images
 import image1 from './assets/images/image1.webp'
@@ -30,6 +31,9 @@ import logoinstagram from './assets/images/instagram.svg'
 
 
 function App() {
+  useEffect(() => {
+    document.title = "Luxury Hair Club"; // Set your desired title here
+  }, []);
   const [menuOpen, setMenuOpen] = useState(false);
   const [width, setWidth] = useState(window.innerWidth);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -53,6 +57,11 @@ function App() {
       prevIndex === boxData.length - 1 ? 0 : prevIndex + 1
     );
   };
+  const useDocumentTitle = (title) => {
+    useEffect(() => {
+      document.title = title;
+    }, [title]);
+  };  
   useEffect(() => {
     const handleResize = () => {
       setWidth(window.innerWidth);
@@ -141,7 +150,13 @@ function App() {
   };
   return (
     <div className="App overflow-x-hidden overflow-y-hidden bg-[#F5F5F0]">
+      <Helmet>
+        <title>Luxury Salon</title>
+        <meta name="description" content="Welcome to the luxury salon website" />
+        <link rel="icon" href="./assets/images/favicon.ico"/>
+      </Helmet>
       <header className="custom-bg h-screen">
+        
       <nav className="relative flex items-center justify-between pr-10 pl-10 sm:justify-around sm:p-0">
         {/* Logo */}
         <img src={Logo} alt="Luxury Hair Club Logo" className="w-36 lg:w-40 xl:w-52" />
