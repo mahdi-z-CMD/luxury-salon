@@ -37,8 +37,8 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [width, setWidth] = useState(window.innerWidth);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isVisible, setIsVisible] = useState();
-  const [isVisible2, setIsVisible2] = useState();
+  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible2, setIsVisible2] = useState(true);
 
   const toggleList = () => {
     setIsVisible(!isVisible);
