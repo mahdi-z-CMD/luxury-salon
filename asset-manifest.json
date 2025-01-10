@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/luxury-salon/static/css/main.aa5a3397.css",
-    "main.js": "/luxury-salon/static/js/main.c791fbfe.js",
+    "main.js": "/luxury-salon/static/js/main.20dee87c.js",
     "static/js/488.d41a6b8a.chunk.js": "/luxury-salon/static/js/488.d41a6b8a.chunk.js",
     "static/media/produck3.png": "/luxury-salon/static/media/produck3.ddded89c33e8f68a105f.png",
     "static/media/bg-artists2.png": "/luxury-salon/static/media/bg-artists2.40c8094b47cc548e5515.png",
@@ -33,11 +33,11 @@
     "static/media/facebook.svg": "/luxury-salon/static/media/facebook.509f9878639efb0c720dafc0c305a9e2.svg",
     "static/media/arrowdown.svg": "/luxury-salon/static/media/arrowdown.f9717a40716f06fe8d0b74614d34e535.svg",
     "main.aa5a3397.css.map": "/luxury-salon/static/css/main.aa5a3397.css.map",
-    "main.c791fbfe.js.map": "/luxury-salon/static/js/main.c791fbfe.js.map",
+    "main.20dee87c.js.map": "/luxury-salon/static/js/main.20dee87c.js.map",
     "488.d41a6b8a.chunk.js.map": "/luxury-salon/static/js/488.d41a6b8a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.aa5a3397.css",
-    "static/js/main.c791fbfe.js"
+    "static/js/main.20dee87c.js"
   ]
 }
