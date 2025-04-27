@@ -178,16 +178,44 @@ function App() {
             menuOpen ? "block" : "hidden"
           }`}
         >
-          <li className="hover:text-orangeColor cursor-pointer text-white xl:text-xl lg:text-sm md:text-xs font-monument pt-[5rem] sm:pt-0">
+          <li className="hover:text-orangeColor cursor-pointer text-white xl:text-xl lg:text-sm md:text-xs font-monument pt-[5rem] sm:pt-0"
+            onClick={() => {
+              document.getElementById("sallon").scrollIntoView({
+                behavior: "smooth", // smooth scroll
+                block: "start", // scroll to the top of the element
+              });
+            }}
+          >
             Salon Overview
           </li>
-          <li className="hover:text-orangeColor cursor-pointer text-white xl:text-xl lg:text-sm md:text-xs font-monument pt-[5rem] sm:pt-0">
+          <li className="hover:text-orangeColor cursor-pointer text-white xl:text-xl lg:text-sm md:text-xs font-monument pt-[5rem] sm:pt-0"
+            onClick={() => {
+              document.getElementById("gentlemens-services").scrollIntoView({
+                behavior: "smooth", // smooth scroll
+                block: "start", // scroll to the top of the element
+              });
+            }}
+          >
             Price List
           </li>
-          <li className="hover:text-orangeColor cursor-pointer text-white xl:text-xl lg:text-sm md:text-xs font-monument pt-[5rem] sm:pt-0">
+          <li className="hover:text-orangeColor cursor-pointer text-white xl:text-xl lg:text-sm md:text-xs font-monument pt-[5rem] sm:pt-0"
+            onClick={() => {
+              document.getElementById("gallery").scrollIntoView({
+                behavior: "smooth", // smooth scroll
+                block: "start", // scroll to the top of the element
+              });
+            }}
+          >
             Gallery
           </li>
-          <li className="hover:text-orangeColor cursor-pointer text-white xl:text-xl lg:text-sm md:text-xs font-monument pt-[5rem] sm:pt-0">
+          <li className="hover:text-orangeColor cursor-pointer text-white xl:text-xl lg:text-sm md:text-xs font-monument pt-[5rem] sm:pt-0"
+            onClick={() => {
+              document.getElementById("contact").scrollIntoView({
+                behavior: "smooth", // smooth scroll
+                block: "start", // scroll to the top of the element
+              });
+            }}
+          >
             Contact
           </li>
           {menuOpen ? <>
@@ -216,7 +244,14 @@ function App() {
         <span className='text-white font-normal text-xs sm:text-base'>Since 1989</span>
         <h1 className='pt-10 text-3xl text-white tracking-widest leading-9 sm:text-6xl font-bold'>UNISEX HAIR <span className='text-black text-stroke p-1'>HAVEN</span></h1>
         <p className='text-sm sm:text-base leading-7 text-white pt-10 text-center w-80 sm:w-2/3 lg:w-2/3 xl:w-1/2 self-center font-lovelace font-normal'>There is a vision at the Luxury Hair Club hair salon in Düsseldorf, Oberbilk: to create a retreat for men as well as a modern beauty salon for women. You can experience the results for yourself during your visit and let yourself be pampered in a luxurious way.</p>
-        <a className='text-white text-sm sm:text-base tracking-wider mt-20 font-semibold border border-white self-center w-72 p-5 rounded cursor-pointer hover:text-white hover:border-black  hover:bg-black hover:bg-opacity-80 transition-all duration-200 ease-in-out'>Prices</a>
+        <a className='text-white text-sm sm:text-base tracking-wider mt-20 font-semibold border border-white self-center w-72 p-5 rounded cursor-pointer hover:text-white hover:border-black  hover:bg-black hover:bg-opacity-80 transition-all duration-200 ease-in-out'
+          onClick={() => {
+            document.getElementById("gentlemens-services").scrollIntoView({
+              behavior: "smooth", // smooth scroll
+              block: "start", // scroll to the top of the element
+            });
+          }}
+        >Prices</a>
       </div>
       </header>
       <div className='h-20 relative w-[140%] text-6xl sm:w-[110%] sm:h-[150px] bg-orangeColor -rotate-2 bottom-10 right-5 sm:relative flex justify-center items-center'>
@@ -224,7 +259,7 @@ function App() {
           RASAGE & TONTE
         </h1>
       </div>
-      <main className='bg-[#F5F5F0]'>
+      <main className='bg-[#F5F5F0]' id="sallon">
         {/* section 1 */}
         <section className='sm:flex bottom-20 relative flex flex-col-reverse sm:flex-row'>
           <div className='sm:flex flex-col sm:w-1/2 sm:mt-52 mt-20 items-center'>
@@ -285,7 +320,7 @@ function App() {
               <p className='text-[#222124] xl:text-2xl md:text-xl lg:text-xl font-lovelace font-normal text-left xl:left-40 md:left-20 leading-7 tracking-wider sm:mt-0 mt-14 w-2/2 sm:leading-10 relative xl:w-1/2 md:w-2/3'>Une barbe nette, une moustache ciselée, une coupe personnalisée, des soins ciblés, le grooming, c’est l’art de prendre soin de vous. Chez nous, vous arrivez avec ou sans idée précise de votre futur look… </p>
             </div>
         </div>
-        <div className='flex flex-col gap-3 justify-start items-center mt-20'>
+        <div className='flex flex-col gap-3 justify-start items-center mt-20' id="gallery">
           <h1 className='font-monument sm:text-6xl tracking-widest text-3xl'>NOS ARTISTES</h1>
           <p className='font-lovelace font-extralight text-base lead sm:text-base text-center w-3/4 xl:w-1/3 md:w-2/3 mt-10 sm:mt-8'>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus</p>
           <a className='z-10 mb-24 relative text-xs top-10 border border-black rounded p-4 text-[#000000] sm:text-xs cursor-pointer leading-5 tracking-wider hover:text-white hover:border-black  hover:bg-black hover:bg-opacity-80 transition-all duration-200 ease-in-out'>DÉCOUVRIR</a>
@@ -314,7 +349,7 @@ function App() {
             )}
           </div>
         </div>
-        <div className='flex flex-col items-center mt-40 sm:mt-20'>
+        <div className='flex flex-col items-center mt-40 sm:mt-20' id="gentlemens-services">
           <h1 className='font-monument sm:text-6xl tracking-widest text-3xl'>Gentlemen's Services</h1>
           <p className='font-lovelace font-extralight text-base lead sm:text-base text-center w-3/4 xl:w-1/3 md:w-2/3 mt-10 sm:mt-8'>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus adipiscing elit ut aliquam.</p>
           <div className="flex flex-col items-center w-full justify-center mt-10 relative">
@@ -367,7 +402,7 @@ function App() {
           </div>
         </div>
         </div>
-        <div className='h-20 relative w-[180%] text-6xl sm:w-[110%] sm:h-[150px] bg-orangeColor rotate-2 mt-40 right-5 sm:relative flex justify-center items-center'>
+        <div className='h-20 relative w-[180%] text-6xl sm:w-[110%] sm:h-[150px] bg-orangeColor rotate-2 mt-40 right-5 sm:relative flex justify-center items-center' id="contact">
         <h1 className='text-transparent text-stroke2 tracking-widest xl:text-8xl 2xl:text-9xl lg:text-7xl md:text-6xl sm:text-5xl text-6xl'>
           NOUS CONTACTER 
         </h1>
