@@ -2,6 +2,7 @@ import './App.css';
 import Logo from './assets/logo2_nobg.png';
 import React, { useState , useEffect } from "react";
 import { Helmet } from "react-helmet";
+import { X } from "lucide-react";
 
 // images
 import image1 from './assets/images/image1.webp'
@@ -28,6 +29,14 @@ import arrowdownlogo from './assets/images/arrowdown.svg'
 import logofacebook from './assets/images/facebook.svg'
 import logox from './assets/images/x.svg'
 import logoinstagram from './assets/images/instagram.svg'
+import gallery1 from './assets/gallery/20250107_162052n.jpg'
+import gallery2 from './assets/gallery/20250122_150004n.jpg'
+import gallery3 from './assets/gallery/20250123_102011n.jpg'
+import gallery4 from './assets/gallery/20250123_112906n.jpg'
+import gallery5 from './assets/gallery/20250123_123642n.jpg'
+import gallery6 from './assets/gallery/20250123_125346n.jpg'
+import gallery7 from './assets/gallery/20250123_183540n.jpg'
+import gallery8 from './assets/gallery/20250124_122041n.jpg'
 
 
 function App() {
@@ -39,6 +48,8 @@ function App() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
   const [isVisible2, setIsVisible2] = useState(true);
+  const images = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, gallery8];
+  const [fullscreenImage, setFullscreenImage] = useState(null);
 
   const toggleList = () => {
     setIsVisible(!isVisible);
@@ -111,7 +122,7 @@ function App() {
   }
   const Boxprices = ({ name, des, price, descriptions = [] }) => {
     return (
-      <div className="border-2 border-black xl:p-10 md:p-3 sm:p-0 p-5 rounded-lg flex flex-col basis-2/3 sm:w-[90%] max-w-[500px] bg-[#F5F5F0] transition-transform duration-500 transform hover:scale-105 opacity-0 blur-100 animate-fade-in">
+      <div className="border-2 border-black xl:p-10 md:p-3 sm:p-0 p-5 rounded-lg flex flex-col basis-2/3 sm:w-[90%] max-w-[500px] bg-[#F5F5F0] transition-transform duration-500 transform hover:scale-105 opacity-100 blur-none hover:opacity-100 hover:blur-none animate-fade-in">
         <div className="flex flex-col items-center h-1/2">
           <h1 className="xl:text-xl sm:text-lg font-monument tracking-widest mt-4">{name}</h1>
           <p className="xl:text-base sm:text-xs text-[rgba(18,18,18,0.7)] m-3 sm:w-72 font-lovelace">{des}</p>
@@ -121,9 +132,9 @@ function App() {
             Book now
           </button>
         </div>
-        <div className="flex flex-col mt-16 gap-3 pb-3 font-lovelace xl:text-base sm:text-xs">
+        <div className="flex flex-col mt-16 gap-5 pb-3 font-lovelace xl:text-xs sm:text-xs">
           {descriptions.map((description, index) => (
-            <p key={index} className="flex items-center">
+            <p key={index} className="flex items-center text-left">
               <img src={Ticksvg} className="mr-3" alt="Tick" />
               {description}
             </p>
@@ -278,29 +289,33 @@ function App() {
           <h1 className='font-monument sm:text-6xl tracking-widest text-3xl'>NOS ARTISTES</h1>
           <p className='font-lovelace font-extralight text-base lead sm:text-base text-center w-3/4 xl:w-1/3 md:w-2/3 mt-10 sm:mt-8'>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus</p>
           <a className='z-10 mb-24 relative text-xs top-10 border border-black rounded p-4 text-[#000000] sm:text-xs cursor-pointer leading-5 tracking-wider hover:text-white hover:border-black  hover:bg-black hover:bg-opacity-80 transition-all duration-200 ease-in-out'>DÉCOUVRIR</a>
-          {
-            width >= 620 ? <img src={bg_artists} className='sm:w-[940px] sm:h-[970px] sm:relative sm:bottom-7 border-8 border-[#F5F5F0]'></img> : <>
-              <Boxartists
-                src={artisimg1}
-                src2={artisimg2}
-                span={'Saga'}
-                span2={'Sudanka'}
-                name={' Lindén, Hair Designer'}
-                name2={' Bakalowi, Hair Designer'}
-              ></Boxartists>
-              <Boxartists
-                src={artisimg3}
-                src2={artisimg4}
-                span={'Saga'}
-                span2={'Frank'}
-                name={'  Boehm, Responsable'}
-                name2={' Bakalowi, Hair Designer'}
-              ></Boxartists>
-            </>
-          }
+          <div className="flex flex-wrap gap-10 px-20 justify-center">
+            {images.map((image, index) => (
+              <img
+                key={index}
+                src={image}
+                alt="gallery"
+                className="w-[300px] h-[600px] rounded-md cursor-pointer basis-1/4
+                          transition-all duration-500 transform hover:scale-105 hover:grayscale-0"
+                onClick={() => setFullscreenImage(image)}
+              />
+            ))}
+
+            {fullscreenImage && (
+              <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+                <button
+                  className="absolute top-5 right-5 bg-white text-black p-2 rounded-full"
+                  onClick={() => setFullscreenImage(null)}
+                >
+                  <X size={24} />
+                </button>
+                <img src={fullscreenImage} alt="fullscreen" className="max-w-full max-h-full rounded-lg" />
+              </div>
+            )}
+          </div>
         </div>
         <div className='flex flex-col items-center mt-40 sm:mt-20'>
-          <h1 className='font-monument sm:text-6xl tracking-widest text-3xl'>NOS TARIFS</h1>
+          <h1 className='font-monument sm:text-6xl tracking-widest text-3xl'>Gentlemen's Services</h1>
           <p className='font-lovelace font-extralight text-base lead sm:text-base text-center w-3/4 xl:w-1/3 md:w-2/3 mt-10 sm:mt-8'>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus adipiscing elit ut aliquam.</p>
           <div className="flex flex-col items-center w-full justify-center mt-10 relative">
           {/* Navigation Buttons */}

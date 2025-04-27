@@ -1,32 +1,33 @@
 [
     {
-      "name": "Coiffure",
-      "des": "An add-on is a set of premium features that you can add to your Forma",
-      "price": "30",
-      "des1": "Analyse et massage du cuir chevelu",
-      "des2": "Application d’un soin adapté",
-      "des3": "Coupe de cheveux",
-      "des4": "Coupe de cheveux",
-      "des5": "Fixation"
+      "name": "Haircut",
+      "des": "Modern and stylish haircut for men, featuring clean lines and sharp edges.",
+      "price": "20",
+      "des1": "Scalp analysis and soothing massage",
+      "des2": "Application of tailored hair care product",
+      "des3": "Precision haircut for men",
+      "des4": "Styling with professional tools",
+      "des5": "Final finishing and fixation"
     },
     {
-      "name": "Coiffure ET BARBE",
-      "des": "An add-on is a set of premium features that you can add to your Forma",
-      "price": "45",
-      "des1": "Analyse et massage du cuir chevelu",
-      "des2": "Application d’un soin adapté",
-      "des3": "Coupe de cheveux",
-      "des4": "Taille et tonte de barbe",
-      "des5": "Fixation"
+      "name": "Wash, Cut and styling",
+      "des": "A complete grooming package for men, including wash, haircut, and stylish finish",
+      "price": "25",
+      "des1": "Refreshing shampoo and scalp cleanse",
+      "des2": "Application of nourishing hair care products",
+      "des3": "Expert haircut tailored to preferences",
+      "des4": "Professional hair styling for a polished look",
+      "des5": "Finishing touch with premium styling products"
     },
     {
-      "name": "LES POLOS",
-      "des": "An add-on is a set of premium features that you can add to your Forma",
-      "price": "12",
-      "des1": "Analyse et massage du cuir chevelu",
-      "des2": "Application d’un soin adapté",
-      "des3": "Coupe de cheveux",
-      "des4": "Taille et tonte de barbe"
+      "name": "Machine cut",
+      "des": "Efficient and precise machine haircut for men, delivering a clean, sharp look",
+      "price": "15",
+      "des1": "Quick and hygienic machine setup",
+      "des2": "Precision haircut using clippers",
+      "des3": "Customizable lengths for a tailored style",
+      "des4": "Detailed edging for clean lines",
+      "des5": "Finishing with a smooth, polished touch"
     },
     {
       "name": "PAPLO EMLIO ESKOBARO",
