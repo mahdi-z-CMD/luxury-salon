@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/luxury-salon/static/css/main.35b5c8f5.css",
-    "main.js": "/luxury-salon/static/js/main.4babe524.js",
+    "main.js": "/luxury-salon/static/js/main.ecbb8e74.js",
     "static/js/488.6f3442f4.chunk.js": "/luxury-salon/static/js/488.6f3442f4.chunk.js",
     "static/media/DSC07027.JPG": "/luxury-salon/static/media/DSC07027.757c86f65b54898fb067.JPG",
     "static/media/20240907_183434.jpg": "/luxury-salon/static/media/20240907_183434.4bea99248bae7d4e35d7.jpg",
@@ -43,7 +43,7 @@
     "static/media/produck1.png": "/luxury-salon/static/media/produck1.588f50c21107a127dd58.png",
     "static/media/Zetafonts - Lovelace Text Regular.otf": "/luxury-salon/static/media/Zetafonts - Lovelace Text Regular.13f9fe62b251e0244a9e.otf",
     "static/media/image3_tool.png": "/luxury-salon/static/media/image3_tool.a1353b91cb42722e7768.png",
-    "static/media/logo2_nobg.png": "/luxury-salon/static/media/logo2_nobg.99152a54dfd4ed4f1296.png",
+    "static/media/logo2_nobg.png": "/luxury-salon/static/media/logo2_nobg.25f680d9fe06dcc556a0.png",
     "static/media/bg-artists.jpg": "/luxury-salon/static/media/bg-artists.18ac76e066e75537eb67.jpg",
     "static/media/image2_tool.png": "/luxury-salon/static/media/image2_tool.4a360648a14d948a502e.png",
     "static/media/background_header.webp": "/luxury-salon/static/media/background_header.43e3b824ed5c0613b2c0.webp",
@@ -58,11 +58,11 @@
     "static/media/facebook.svg": "/luxury-salon/static/media/facebook.509f9878639efb0c720dafc0c305a9e2.svg",
     "static/media/arrowdown.svg": "/luxury-salon/static/media/arrowdown.f9717a40716f06fe8d0b74614d34e535.svg",
     "main.35b5c8f5.css.map": "/luxury-salon/static/css/main.35b5c8f5.css.map",
-    "main.4babe524.js.map": "/luxury-salon/static/js/main.4babe524.js.map",
+    "main.ecbb8e74.js.map": "/luxury-salon/static/js/main.ecbb8e74.js.map",
     "488.6f3442f4.chunk.js.map": "/luxury-salon/static/js/488.6f3442f4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.35b5c8f5.css",
-    "static/js/main.4babe524.js"
+    "static/js/main.ecbb8e74.js"
   ]
 }
